@@ -1,6 +1,7 @@
 #Image Indexer
 Author: asabj88@gmail.com<br>
-A miniproject that lets a user create and store an image indexer, and then browse through it via a web UI.
+A miniproject that lets a user create and store an image indexer, and then browse through it via a web UI.<br>
+Scroll down for a step-by-step guide to run the application.
 
 ##Layers
 This project consists of three layers:
@@ -33,11 +34,13 @@ and implements two RESTful methods: GET and POST to /api/images
 An AngularJS web application fetches the image index from the API and displays it in a table.
 It provides a search utility in the form of filters.
 
-## Run the application - step-by-step guide
-1. If you don't have either Python3 or NodeJS installed, make
-sure to download them first:
+## Dependancies
+Python3 and NodeJS are needed to run the applications.
 	- https://www.python.org/downloads/
 	- https://nodejs.org/en/download/
+
+## Run the application - step-by-step guide
+1. If you don't have either Python3 or NodeJS installed, make sure to download them first.
 
 2. Go to ImageIndexer\back-end\API and run
 ```
