@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html ng-app="ImageIndexerProject">
+	<head>
+		<title>Image Indexer</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<script src="/src/node_modules/angular/angular.js"></script>
+		<script src="/src/node_modules/angular-route/angular-route.js"></script>
+
+		<link rel="stylesheet" href="/styles/app.css"></script>
+		<script src="/src/app.js"></script>
+		<script src="/src/images/ImageController.js"></script>
+
+	</head>
+	<body class="App">
+
+	<!--Banner-->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<!--Brand-->
+				<a href="/#/" class="navbar-brand">Image Indexer</a>
+			</div>
+
+			<!--Menu items-->
+			<div class="collapse navbar-collapse" id="mainNavBar">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="homeLink" class="active"><a href="/#/">Home</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+	<!-- Template view injection-->
+	<div class="clearfix container-fluid" ng-view id="content"></div>
+
+	<hr>
+	<footer class='container footer'>
+		<small>
+			Created by Ása Björk Valdimarsdóttir - <a href="mailto:asabj88@gmail.com">asabj88@gmail.com</a>
+		</small>
+	</footer>
+</body>
+</html>

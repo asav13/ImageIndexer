@@ -1,0 +1,25 @@
+.sidepanel{
+	color: #9d9d9d;
+}
+
+.filter{
+	padding-bottom: 5pt;
+	padding-top: 	4pt;
+}
+
+.navbar{
+	padding-top: 4pt;
+	padding-bottom: 4pt;
+}
+
+.table {
+	table-layout:fixed;
+}
+
+.table td, th{
+	white-space: nowrap;
+	overflow: hidden;
+}
+.footer {
+  padding-bottom: 20px;
+}

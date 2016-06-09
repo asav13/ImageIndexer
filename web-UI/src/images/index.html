@@ -1,0 +1,80 @@
+<div class="row">
+	<div class="col-md-2 sidepanel navbar navbar-inverse">
+		<form class="filter">
+			<div class="form-group">
+				<label for="filename">Filter by filename</label>
+				<input placeholder="Filename"
+						name="filename"
+						class="form-control"
+						type="text"
+						ng-model="filenameSearch">
+			</div>
+		</form>
+
+		<form class="filter">
+			<div class="form-group">
+				<label for="path">Filter by location</label>
+				<input placeholder="Location"
+						name="location"
+						class="form-control"
+						type="text"
+						ng-model="locationSearch">
+			</div>
+		</form>
+
+		<form class="filter">
+			<label for="path">Filter by format</label>
+			<div class="form-group">
+				<input placeholder="Format"
+						name="format"
+						class="form-control"
+						type="text"
+						ng-model="formatSearch">
+			</div>
+		</form>
+
+	</div> <!-- Side panel end-->
+	<div class="col-md-7 col-md-offset-1">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>
+						<span >Filename</span>
+					</th>
+					<th>
+						<span>Location</span>
+					</th>
+					<th>
+						<span>Format</span>
+					</th>
+					<th>
+						<span>Created</span>
+					</th>
+					<th>
+						<span>Size</span>
+					</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr ng-repeat="d in data | filter:{filename: filenameSearch} | filter:{location: locationSearch} | filter:{format: formatSearch}" class="small">
+					<td >
+						{{d.filename}}
+					</td>
+					<td>
+						{{d.location}}
+					</td>
+					<td> 
+						{{d.format}}
+					</td>
+					<td> 
+						{{d.created}}
+					</td>
+					<td> 
+						{{d.size}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
