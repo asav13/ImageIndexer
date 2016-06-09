@@ -1,16 +1,17 @@
 #Image Indexer
+Author: asabj88@gmail.com<br>
+A miniproject that lets a user create and store an image indexer, and then browse through it via a web UI.
 
 ##Layers
-
 This project consists of three layers:
 - A python application that scans through a file system and generates an index of all images
 - A AngularJS web UI application that allows a user to browse through the index
 - A NodeJS web API which the two applications use to communicate through
 
-### Image Indexer
-The python script ImageIndexer.py walks through the file system, and gathers
-information about all images it finds. This information is then posted to
-an API.
+### Image Indexer python application
+The python script ImageIndexer.py walks through the file system, and gathers information 
+about all images it finds. This information is then posted to an API by default, however 
+there is an option to save it to a local .json file
 
 Usage:
 optional arguments:
@@ -22,14 +23,14 @@ optional arguments:
                         an option to save the index locally, takes one parameter:
                         destination for file
 
-### API
-A very simple NodeJS web API server was set up to handle communication between the two applications.
-This was done so that the two applications could, if needed, communicate over the internet between
-different hosts.
-The API uses sqlite3 to store the data.
+### NodeJS web API 
+A very simple NodeJS web API that handles communication between the two applications.
+An API was used instead of for example a local file, so that the two applications could perhaps, 
+if needed, communicate over the internet between different hosts. The API uses sqlite3 to store the data, 
+and implements two RESTful methods: GET and POST to /api/images
 
-### WEB UI
-An AngularJS fetches the image index from the API and displays it in a table.
+### AngularJS WEB UI
+An AngularJS web application fetches the image index from the API and displays it in a table.
 It provides a search utility in the form of filters.
 
 ## Run the application - step-by-step guide
@@ -43,7 +44,7 @@ sure to download them first:
 node ImageIndexerApi.js
 ```
 NB: You might have to run ```npm install``` first, even though
-the dependancies are provided
+the dependancies are provided in the zip file.
 
 This starts the API web server locally.
 
